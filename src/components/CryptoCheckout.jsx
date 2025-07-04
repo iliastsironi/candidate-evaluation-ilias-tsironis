@@ -107,3 +107,4 @@ function CryptoCheckout() {
     </div>
   );
 }
+export default CryptoCheckout;
