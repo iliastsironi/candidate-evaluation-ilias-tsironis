@@ -30,50 +30,6 @@ function CryptoCheckout() {
       setMessage('Sent ' + amount + ' ETH! 🎉');
     }, 1000);
   }
-  ChatGPT said:
-
-Thought for 4 seconds
-Absolutely—here’s the version with no arrow functions anywhere, including the component itself and the input handler:
-
-jsx
-Copy code
-import React, { useState } from 'react';
-
-function CryptoCheckout() {
-  // 4 pieces of state
-  const [connected, setConnected] = useState(false);
-  const [address,   setAddress]   = useState('');
-  const [amount,    setAmount]    = useState('');
-  const [message,   setMessage]   = useState('');
-
-  // Simulate wallet connection
-  function connectWallet() {
-    var fake = '0x' + Math.random().toString(36).substring(2, 10);
-    setConnected(true);
-    setAddress(fake);
-    setMessage('Connected: ' + fake);
-  }
-
-  // Handle the amount input change
-  function handleAmountChange(event) {
-    setAmount(event.target.value);
-  }
-
-  // Simulate sending a payment
-  function sendPayment() {
-    if (!connected) {
-      setMessage('Please connect your wallet first.');
-      return;
-    }
-    if (!amount) {
-      setMessage('Please enter an amount.');
-      return;
-    }
-    setMessage('Sending ' + amount + ' ETH...');
-    setTimeout(function() {
-      setMessage('Sent ' + amount + ' ETH! 🎉');
-    }, 1000);
-  }
 
   // UI
   return (
