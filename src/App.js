@@ -5,6 +5,8 @@ import { NavRoutes } from "./routes/NavRoutes";
 import { useData } from "./contexts/DataProvider.js";
 import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
 import { Loader } from "./components/Loader/Loader";
+import CryptoCheckout from "./components/CryptoCheckout";
+
 
 function App() {
   const { loading } = useData();
@@ -13,6 +15,7 @@ function App() {
     <div className="App">
       <Header />
       {loading && <Loader />}
+      <CryptoCheckout />
       <NavRoutes />
       <ScrollToTop />
       <Toaster
