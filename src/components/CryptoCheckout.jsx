@@ -7,6 +7,7 @@ function CryptoCheckout() {
   const [amount,    setAmount]    = useState('');
   const [message,   setMessage]   = useState('');
 
+  
   // Make up a short fake address and mark as connected
   function connectWallet() {
     const fake = '0x' + Math.random().toString(36).slice(2, 10);
